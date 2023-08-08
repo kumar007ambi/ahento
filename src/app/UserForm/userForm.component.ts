@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'userForm-app',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class UserFormComponent {
   onSubmit() {
-    console.log('Form');
+    console.log('Submitted');
   }
 }

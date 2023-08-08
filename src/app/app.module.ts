@@ -6,14 +6,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
 import { ServerComponent } from './servers/servers.component';
-import { RouterModule, Routes } from '@angular/router';
-import { EditServerComponent } from './servers/editServer/editServer.component';
-import { ViewServerComponent } from './servers/viewServer/viewServer.component';
-
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -21,7 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
     ServerComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
