@@ -6,7 +6,7 @@ import { ServerComponent } from './servers/servers.component';
 import { EditServerComponent } from './servers/editServer/editServer.component';
 import { ViewServerComponent } from './servers/viewServer/viewServer.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
-import { UserFormComponent } from './UserForm/form.component';
+import { UserFormComponent } from './UserForm/userForm.component';
 
 const appRoutes: Routes = [
   { path: '', title: 'Home', component: HomeComponent },
@@ -20,7 +20,7 @@ const appRoutes: Routes = [
       { path: 'server/view', component: ViewServerComponent },
     ],
   },
-  { path: 'userFrom', title: 'UserPage', component: UserFormComponent },
+  { path: 'userForm', title: 'UserPage', component: UserFormComponent },
   { path: 'not-found', title: 'Error Page', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' },
 ];
