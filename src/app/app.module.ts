@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -10,7 +10,6 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -18,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     ServerComponent,
     PageNotFoundComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

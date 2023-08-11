@@ -17,4 +17,7 @@ export class ReactiveFormComponent implements OnInit {
       gender: new FormControl('male'),
     });
   }
+  signup() {
+    //console.log(this.signupForm.value);
+  }
 }
