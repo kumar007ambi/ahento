@@ -4,14 +4,28 @@
       <form>
         <div class="form-group">
           <label for="username">Username</label>
-          <input type="text" id="username" class="form-control" />
+          <input
+            type="text"
+            id="username"
+            FormControlName="username"
+            class="form-control"
+          />
         </div>
         <div class="form-group">
           <label for="email">email</label>
-          <input type="text" id="email" class="form-control" />
+          <input
+            type="text"
+            id="email"
+            FormControlName="email"
+            class="form-control"
+          />
         </div>
         <div class="radio" *ngFor="let gender of genders">
-          <label> <input type="radio" [value]="gender" />{{ gender }} </label>
+          <label>
+            <input type="radio" FormControlName="gender" [value]="gender" />{{
+              gender
+            }}
+          </label>
         </div>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
