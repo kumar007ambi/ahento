@@ -8,6 +8,7 @@ import { ViewServerComponent } from './servers/viewServer/viewServer.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { UserFormComponent } from './UserForm/userForm.component';
 import { ReactiveFormComponent } from './reactiveForm/reactiveForm.component';
+import { MyPipesComponent } from './pipes/myPipes.component';
 
 const appRoutes: Routes = [
   { path: '', title: 'Home', component: HomeComponent },
@@ -22,7 +23,12 @@ const appRoutes: Routes = [
     ],
   },
   { path: 'userForm', title: 'UserPage', component: UserFormComponent },
-  { path: 'reactiveForm', title: 'ReactiveFormPage', component:ReactiveFormComponent },
+  {
+    path: 'reactiveForm',
+    title: 'ReactiveFormPage',
+    component: ReactiveFormComponent,
+  },
+  { path: 'myPipes', title: 'Pipes', component: MyPipesComponent },
   { path: 'not-found', title: 'Error Page', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' },
 ];

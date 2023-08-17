@@ -8,6 +8,9 @@ import { UsersComponent } from './users/users.component';
 import { ServerComponent } from './servers/servers.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MyPipesComponent } from './pipes/myPipes.component';
+import { ShortenPipe } from './shorten.pipe';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { AppRoutingModule } from './app-routing.module';
     UsersComponent,
     ServerComponent,
     PageNotFoundComponent,
+    MyPipesComponent,
+    ShortenPipe,
+    FilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
