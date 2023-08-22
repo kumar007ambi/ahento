@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MyPipesComponent } from './pipes/myPipes.component';
 import { ShortenPipe } from './shorten.pipe';
 import { FilterPipe } from './filter.pipe';
+import { PostRequestComponent } from './httpRequest/postRequest.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,15 @@ import { FilterPipe } from './filter.pipe';
     MyPipesComponent,
     ShortenPipe,
     FilterPipe,
+    PostRequestComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
