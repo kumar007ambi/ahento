@@ -13,6 +13,7 @@ import { ShortenPipe } from './shorten.pipe';
 import { FilterPipe } from './filter.pipe';
 import { PostRequestComponent } from './httpRequest/postRequest.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostService } from './httpRequest/posts.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
