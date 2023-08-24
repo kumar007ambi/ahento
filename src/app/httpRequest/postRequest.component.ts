@@ -13,17 +13,14 @@ import { Subscription } from 'rxjs';
 export class PostRequestComponent implements OnInit, OnDestroy {
   loadedPosts: Post[] = [];
   isFetching = false;
-  error = 'null';
+  error = null;
   private errorSub!: Subscription;
 
   constructor(private http: HttpClient, private postService: PostService) {}
-  ngOnDestroy() {
-    this.errorSub.unsubscribe();
-  }
 
   ngOnInit() {
     this.errorSub = this.postService.error.subscribe((errorMessage) => {
-      this.error = errorMessage;
+      //this.error = errorMessage;
     });
 
     this.isFetching = true;
@@ -51,6 +48,7 @@ export class PostRequestComponent implements OnInit, OnDestroy {
         this.loadedPosts = posts;
       },
       (error) => {
+        this.isFetching = false;
         this.error = error.message;
         console.log(error);
       }
@@ -62,5 +60,13 @@ export class PostRequestComponent implements OnInit, OnDestroy {
     this.postService.deletePosts().subscribe(() => {
       this.loadedPosts = [];
     });
+  }
+
+  onHandleError() {
+    this.error = null;
+  }
+
+  ngOnDestroy() {
+    this.errorSub.unsubscribe();
   }
 }
