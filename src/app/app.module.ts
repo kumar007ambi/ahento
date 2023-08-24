@@ -12,8 +12,9 @@ import { MyPipesComponent } from './pipes/myPipes.component';
 import { ShortenPipe } from './shorten.pipe';
 import { FilterPipe } from './filter.pipe';
 import { PostRequestComponent } from './httpRequest/postRequest.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PostService } from './httpRequest/posts.service';
+import { AuthInterceptorService } from './httpRequest/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,14 @@ import { PostService } from './httpRequest/posts.service';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [PostService],
+  providers: [
+    PostService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
