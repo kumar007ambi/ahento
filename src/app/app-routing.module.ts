@@ -6,9 +6,9 @@ import { ServerComponent } from './servers/servers.component';
 import { EditServerComponent } from './servers/editServer/editServer.component';
 import { ViewServerComponent } from './servers/viewServer/viewServer.component';
 import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
-import { UserFormComponent } from './UserForm/userForm.component';
-import { ReactiveFormComponent } from './reactiveForm/reactiveForm.component';
-import { MyPipesComponent } from './pipes/myPipes.component';
+// import { UserFormComponent } from './UserForm/userForm.component';
+// import { ReactiveFormComponent } from './reactiveForm/reactiveForm.component';
+// import { MyPipesComponent } from './pipes/myPipes.component';
 import { PostRequestComponent } from './httpRequest/postRequest.component';
 
 const appRoutes: Routes = [
