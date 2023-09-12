@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 // import { ReactiveFormComponent } from './reactiveForm/reactiveForm.component';
 // import { MyPipesComponent } from './pipes/myPipes.component';
 import { PostRequestComponent } from './httpRequest/postRequest.component';
+import { AuthComponent } from './auth/auth.component';
 
 const appRoutes: Routes = [
   { path: '', title: 'Home', component: HomeComponent },
@@ -24,7 +25,7 @@ const appRoutes: Routes = [
     ],
   },
   { path: 'post', title: 'postRequest', component: PostRequestComponent },
-  //{ path: 'userForm', title: 'UserPage', component: UserFormComponent },
+  { path: 'auth', title: 'UserPage', component: AuthComponent },
   // {
   //   path: 'reactiveForm',
   //   title: 'ReactiveFormPage',
