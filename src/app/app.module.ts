@@ -17,6 +17,7 @@ import { PostService } from './httpRequest/posts.service';
 import { AuthInterceptorService } from './httpRequest/auth-interceptor.service';
 import { LoggingInterceptorService } from './httpRequest/logging-interceptor.service';
 import { AuthComponent } from './auth/auth.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AuthComponent } from './auth/auth.component';
     FilterPipe,
     PostRequestComponent,
     AuthComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
