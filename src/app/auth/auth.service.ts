@@ -1,4 +1,8 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
@@ -21,12 +25,14 @@ export class AuthService {
   signup(email: string, password: string) {
     return this.http
       .post<AuthResponceData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' +
-          `{FIREBASE_API_KEY}`,
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAASQ-ds6AWMDqPkvtLqcDK-7q79GSAjZ0/.json',
         {
           email: email,
           password: password,
           returnSecureToken: true,
+        },
+        {
+          headers: new HttpHeaders({ 'Custom-header': 'Hello' }),
         }
       )
       .pipe(
