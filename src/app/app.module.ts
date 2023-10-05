@@ -18,6 +18,7 @@ import { AuthInterceptorService } from './httpRequest/auth-interceptor.service';
 import { LoggingInterceptorService } from './httpRequest/logging-interceptor.service';
 import { AuthComponent } from './auth/auth.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { DogListComponent } from './dog-list/dog-list.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     FilterPipe,
     PostRequestComponent,
     AuthComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    DogListComponent,
   ],
   imports: [
     BrowserModule,
