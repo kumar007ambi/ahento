@@ -18,7 +18,7 @@ import { AuthInterceptorService } from './httpRequest/auth-interceptor.service';
 import { LoggingInterceptorService } from './httpRequest/logging-interceptor.service';
 import { AuthComponent } from './auth/auth.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
-import { DogListComponent } from './dog-list/dog-list.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import { DogListComponent } from './dog-list/dog-list.component';
     PostRequestComponent,
     AuthComponent,
     SpinnerComponent,
-    DogListComponent,
+   
   ],
   imports: [
     BrowserModule,

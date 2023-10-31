@@ -11,7 +11,6 @@ import { PageNotFoundComponent } from './pageNotFound/pageNotFound.component';
 // import { MyPipesComponent } from './pipes/myPipes.component';
 import { PostRequestComponent } from './httpRequest/postRequest.component';
 import { AuthComponent } from './auth/auth.component';
-import { DogListComponent } from './dog-list/dog-list.component';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '' },
@@ -26,7 +25,7 @@ const appRoutes: Routes = [
       { path: 'server/view', component: ViewServerComponent },
     ],
   },
-  { path: 'list', title: 'doglist', component: DogListComponent },
+  
   { path: 'post', title: 'postRequest', component: PostRequestComponent },
   { path: 'auth', title: 'UserPage', component: AuthComponent },
   // {
