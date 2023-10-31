@@ -32,8 +32,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     FilterPipe,
     PostRequestComponent,
     AuthComponent,
-    SpinnerComponent,
-   
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
